@@ -5,6 +5,134 @@
 }
 
 body {
-    font-family: "Mona Sans", serif;
+    font-family: "Archivo", serif;    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
 }
 
+section {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* FONT */
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+p {
+    font-family: "Inter", serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+/* HEAD */
+.container-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.container-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 5px solid black;
+    padding: 36px;
+    border-radius: 50%; 
+    width: 30px;
+    height: 30px;
+    background-color: #f0eafa;
+}
+
+i {
+    font-size: 24px;
+}
+
+/* MAIN */
+
+form {
+    width: 100%;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-family: "Inter", serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+input {
+    position: relative;
+    padding-left: 40px;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    border: 1px solid black;
+    box-shadow: 0 0.375em 0 black;
+    border-radius: 6px;
+    outline: none;
+}
+
+.input-container i {
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 14px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: black;
+}
+
+button {
+    font-family: "Inter", serif;
+    padding: 15px;
+    background-color: #dbcdf4;
+    border: 1px solid black;
+    box-shadow: 0 0.375em 0 black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f0eafa;
+} 
+
+/* FOOTER */
+.container-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.container-footer p {
+    font-size: 14px;
+}
