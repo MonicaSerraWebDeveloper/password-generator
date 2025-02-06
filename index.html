@@ -30,48 +30,48 @@
         <section>
             <div class="container-title">
                 <div class="container-icon">
-                    <i class="fa-solid fa-book-bookmark"></i>
+                    <i class="fa-solid fa-lock"></i>
                 </div>
-                <h2>Create New Account</h2>
-                <p>Create a new account in the form below</p>
+                <h2>Generate New Password</h2>
+                <p>Custom your password</p>
             </div>
         </section>
     </head>
     <main>
         <section>
-            <form action="post">
-                <div class="container-form">
-                    <div class="input-container">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email">
-                        <i class="fa-regular fa-envelope"></i>
+            <div class="container-main">
+                <div class="checkbox-container">
+                    <div class="single-checkbox">
+                        <label for="uppercase">Do you want uppercase letter?</label>
+                        <input id="uppercase" type="checkbox" name="uppercase" >
                     </div>
-
-                    <div class="input-container">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" name="name" placeholder="Enter your name">
-                        <i class="fa-regular fa-user"></i>
+                    <div class="single-checkbox">
+                        <label for="number">Do you want numbers?</label>
+                        <input id="number" type="checkbox" name="number" >
                     </div>
-                    
-                    <div class="input-container">
-                        <label for="password">Password</label>
-                        <input id="password" type="password" name="password">
-                        <i class="fa-solid fa-lock"></i>
+                    <div class="single-checkbox">
+                        <label for="special">Do you want special character?</label>
+                        <input id="special" type="checkbox" name="special" >
                     </div>
-
-                    <button type="submit">Sign Up</button>
                 </div>
-            </form>
+                <div class="range-container">
+                    <label for="number-character">How many character do you need?</label>
+                    <input id="number-character" type="range" name="number-character" min="6" max="16">
+                </div>
+                <div class="input-container">
+                    <input id="name" type="text" name="password-suggest">
+                    <a class="copy-password" href="#">Copy</a>
+                </div>
+                <button type="button">Generate</button>
+            </div>
         </section>
     </main>
     <footer>
         <section>
             <div class="container-footer">
-                <p>Already have an account?</p>
-                <a href="#">Log In</a>
+                <p>© Copyright 2024 Secure Password</p>
             </div>
         </section>
     </footer>
-    
 </body>
 </html>
