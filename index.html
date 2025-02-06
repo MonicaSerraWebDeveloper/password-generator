@@ -55,14 +55,15 @@
                     </div>
                 </div>
                 <div class="range-container">
-                    <label for="number-character">How many character do you need?</label>
-                    <input id="number-character" type="range" name="number-character" min="6" max="16">
+                    <label for="number-character">How many character do you need?</label><span id="rangeValue">12</span>
+                    <input id="number-character" type="range" name="number-character" min="6" max="16" value="12" oninput="updateRangeValue()">
+                    
                 </div>
                 <div class="input-container">
                     <input id="name" type="text" name="password-suggest">
                     <a class="copy-password" href="#">Copy</a>
                 </div>
-                <button type="button">Generate</button>
+                <button id="generate-password" type="button">Generate</button>
             </div>
         </section>
     </main>
@@ -73,5 +74,6 @@
             </div>
         </section>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
