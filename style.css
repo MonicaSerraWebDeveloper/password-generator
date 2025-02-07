@@ -154,6 +154,7 @@ label {
 
 input[type="text"] {
     position: relative;
+    font-size: 18px;
     padding-left: 10px;
     padding-top: 15px;
     padding-right: 40px;
