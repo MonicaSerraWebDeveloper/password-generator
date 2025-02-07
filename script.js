@@ -4,6 +4,7 @@ const specialCheckbox = document.getElementById('special');
 const rangeNumber = document.getElementById('number-character');
 const textField = document.getElementById('name');
 const buttonGeneratePass = document.getElementById('generate-password');
+const copyText = document.getElementById('copy-password');
 
 function updateRangeValue() {
     document.getElementById("rangeValue").textContent = rangeNumber.value;
@@ -36,10 +37,33 @@ buttonGeneratePass.addEventListener('click', function() {
     }
 
     textField.setAttribute('value', passwordGenerated)
-
-    passwordGenerated = ''
-
 });
 
+const inputContainer = document.querySelector('.input-container')
 
+copyText.addEventListener('click', function(event) {
+    event.preventDefault()
+    navigator.clipboard.writeText(textField.value).then(() => {
 
+        const messageConfirmed = document.createElement('span')
+        messageConfirmed.textContent ='Password copiata!'
+        messageConfirmed.classList.add('message-confirmed')
+
+        inputContainer.appendChild(messageConfirmed)
+
+        setTimeout(() => {
+            messageConfirmed.remove()
+        }, 4000);
+        
+    }).catch(() => {
+        const messageError = document.createElement('span')
+        messageError.textContent = 'Errore nella copia, genera una nuova password e riprova'
+        messageError.classList.add('message-error')
+
+        inputContainer.appendChild(messageError)
+
+        setTimeout(() => {
+            messageError.remove()
+        }, 4000);
+    })
+});
